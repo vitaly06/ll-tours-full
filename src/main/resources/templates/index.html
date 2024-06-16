@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="htttp://thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+    <title>ll tours</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class="first">
+        <div class="block1">
+            <nav>
+                <div class="navbar">
+                    <div class="container nav-container">
+                        <input class="checkbox" type="checkbox" name="" id="" />
+                        <div class="hamburger-lines">
+                        <span class="line line1"></span>
+                        <span class="line line2"></span>
+                        <span class="line line3"></span>
+                        </div>  
+                    <div class="logo">
+                        <img src="images/ll_logo.svg" alt="" class="logo_mobile">
+                    </div>
+                    <div class="menu-items">
+                        <li><a href="#main">Главная</a></li>
+                        <li><a href="#about">О нас</a></li>
+                        <li class="logo_pc"><img src="images/ll_logo.svg" alt=""></li>
+                        <li><a href="#tours">Туры</a></li>
+                        <li><a href="#partners">Партнёры</a></li>
+                        <li><a href="tel:+79878500070">+7(987)-850-00-70</a></li>
+                    </div>
+                    </div>
+                </div>
+            </nav>
+            <div class="block1_text" id="main">
+                <p class="tour_operator">Туроператор</p>
+                <p class="ll_tours">LL Tours - Твои Впечатления Уникальны! Учись и путешествуй с нами!</p>
+                <p class="specials">специализируемся на организации увлекательных и незабываемых путешествий для наших клиентов!</p>
+            </div>
+        </div>
+        <div class="about_us" id="about">
+            <p class="p_about">О нас</p>
+            <hr class="about_hr">
+            <p class="we_ll">Мы - туроператор LL Tours</p>
+            <p class="about_text">специализирующийся на организации увлекательных и незабываемых путешествий для наших клиентов. Мы стремимся предоставить высококачественный сервис, индивидуальный подход к каждому клиенту и непревзойденные впечатления от путешествий.</p>
+        </div>
+    </div>
+    <div class="second" id="tours">
+        <div class="second_img"><img class="all_tours_img" src="images/night_city.png" alt=""></div>
+        <div class="second_text">
+            <p class="all_tours">Посмотрите все направления туров</p>
+            <p class="uniqe_chance">Уникальная возможность путешествовать и открывать новые места, культуры и людей! Наши клиент смогут испытать незабываемые приключения, отдохнуть от повседневной рутины, познакомиться с разными культурами, насладиться красотой природы и историческими достопримечательностями</p>
+            <button class="second_button">Смотреть все</button>
+        </div>
+    </div>
+    <div class="third">
+        <div class="academ">
+            <p class="academ_programm">Академическая программа</p>
+            <p class="for_russian">для Российских врачей в области Китайской медицины</p>
+            <button class="academ_button"><a class="academ_href" th:href="@{/academy}" target="_blank">Узнать подробнее</a></button>
+        </div>
+        <div class="study">
+            <p class="study_programm">Образовательная программа</p>
+            <p class="china">в город Далянь, Китай</p>
+            <button class="study_button"><a class="academ_href" th:href="@{/dalayn}" target="_blank">Узнать подробнее</a></button></button>
+        </div>
+    </div>
+    <div class="record">
+        <div class="record_text">
+            <p class="free_consult">Оставьте заявку на бесплатную консультацию!</p>
+            <p class="we_call">Мы перезвоним Вам в ближайшее время</p>
+        </div>
+        <div class="record_forms">
+            <form th:method="POST" th:action="@{/}" th:object="${person}" class="record_forms">
+            <input type="text" class="name" placeholder="ФИО" name="name">
+            <input type="tel" class="number" placeholder="Номер телефона" name="number">
+            <button class="send_record">Отправить заявку</button>
+            </form>
+            <p class="personal_info">Нажимая кнопку, Вы даете согласие на <span>обработку персональных данных</span></p>
+        </div>
+    </div>
+    <div class="partners" id="partners">
+        <div class="partners_first">
+            <hr class="partners_hr">
+            <p class="partners_text">Наши партнёры</p>
+        </div>
+        <div class="partners_second">
+            <img src="images/big_logo.png" alt="" class="big_logo">
+            <button class="partners_button"><a class="ll_href" href="https://languagelink-orenburg.ru/" target="_blank">подробнее</a></button>
+        </div>
+    </div>
+    <div class="footer">
+        <img src="images/tvu_logo.png" alt="" class="tvu_logo">
+        <p class="footer_text"><span>Ответственный подход </span><span>к работе людей и компаний</span></p>
+        <p class="footer_number"><a href="tel:+79878500070" class="footer_a">+7(987)-850-00-70</a></p>
+        <p class="footer_2024">©2024 ТВУ</p>
+    </div>
+</body>
+</html>
