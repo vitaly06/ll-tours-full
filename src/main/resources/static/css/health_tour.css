@@ -1,0 +1,828 @@
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap');
+*,
+    *::before,
+    *::after {
+      -webkit-box-sizing: border-box;
+      box-sizing: border-box;
+    }
+* {
+    padding: 0;
+    margin: 0;
+    border: 0;
+    box-sizing: border-box;
+  }
+  
+  *, *:before, *:after {
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+  }
+  
+  :focus, :active {
+    outline: none;
+  }
+  
+  a:focus, a:active {
+    outline: none;
+  }
+  
+  nav, footer, header, aside {
+    display: block;
+  }
+  
+  html, body {
+    height: 100%;
+    width: 100%;
+    font-style: 100%;
+    line-height: 1;
+    font-style: 14px;
+    -ms-text-size-adjust: 100%;
+    -moz-text-size-adjust: 100%;
+    -webkit-text-size-adjust: 100%;
+  }
+  html {
+    scroll-behavior: smooth;
+  }
+  input, button, textarea {
+    font-family: inherit;
+  }
+  
+  input::-ms-clear {
+    display: none;
+  }
+  
+  button {
+    cursor: pointer;
+  }
+  
+  button::-moz-focus-inner {
+    padding: 0;
+    border: 0;
+  }
+  
+  a, a:visited {
+    text-decoration: none;
+  }
+  
+  a:hover {
+    text-decoration: none;
+  }
+  
+  ul li {
+    list-style-type: none;
+  }
+  
+  img {
+    vertical-align: top;
+  }
+  
+  h1, h2, h3, h4, h5, h6 {
+    font-style: inherit;
+    font-weight: 400;
+  }
+  /*__________________________*/
+  .modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+  }
+  
+  .modal-content {
+    border-radius: 15px;
+    background-color: #fefefe;
+    margin: 15% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    max-width: 500px;
+  }
+
+
+  .modal-content p{
+    color: black;
+    font-size: 24px;
+  }
+  .close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+  }
+  
+  .close:hover,
+  .close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+  }
+  @media only screen and (max-width: 510px){
+    .modal-content {
+      max-width: 90%;
+    }
+    .modal-content p{
+      font-size: 20px;
+    }
+  }
+  body{
+    color: white;
+    font-family: "Ubuntu", sans-serif;
+    overflow-x: hidden;
+  }
+  /* Блок 1 */
+  .logo_mobile{
+    display: none;
+  }
+  .checkbox {
+    position: absolute;
+    display: block;
+    height: 32px;
+    width: 32px;
+    top: 20px;
+    left: 20px;
+    z-index: 5;
+    opacity: 0;
+    cursor: pointer;
+  }
+.first{
+  list-style-type: none;
+  display: flex;
+  justify-content: center;
+    position: relative;
+    min-height: 600px;
+    margin: 30px auto 0 auto;
+    background-image: url("../images/health/first_bg.png");
+    background-position: right 0;
+    background-size: cover;
+    background-repeat: no-repeat;
+    max-width: 90%;
+    width: auto;
+    border-radius: 15px;
+}
+.menu-items{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    height: 100px;
+}
+.block1{
+    width: 90%;
+}
+.block1_text{
+    text-align: center;
+    
+}
+.ll_tours{
+  max-width: 90%;
+  margin: 150px auto 0 auto;
+    text-transform: uppercase;
+    font-weight: 700;
+    font-size: 48px;
+}
+.about_us{
+  box-shadow: -3px 15px 100px -30px #4bc1fb;
+  position: absolute;
+  bottom: -20%;
+  padding: 30px;
+  font-family: "DM Sans", sans-serif;
+  max-width: 90%;
+  margin: 0 auto;
+  color: black;
+  border-radius: 15px;
+  background-color: white;
+}
+.p_about{
+  margin-top: 10px;
+  font-weight: 400;
+  font-size: 20px;
+}
+.about_hr{
+  margin-top: 15px;
+  height: 4px;
+  width: 100px;
+  border: none;
+  background: rgba(134, 199, 239, 1);
+}
+.we_ll{
+  margin-top: 15px;
+  font-weight: 700;
+  font-size: 38px;
+}
+.about_text{
+  margin-top: 30px;
+  font-weight: 400;
+  font-size: 20px;
+}
+/* проживание */
+.home{
+    font-weight: 700;
+    text-align: center;
+    color: black;
+    font-size: 36px;
+    margin-top: 200px;
+}
+.hotel{
+    font-weight: 700;
+    text-align: center;
+    color: black;
+    font-size: 24px;
+    margin-top: 30px;
+}
+.about_hotel{
+    opacity: 60%;
+    font-weight: 700;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 30px auto 0 auto;
+    color: black;
+    font-size: 20px;
+}
+.about_hotel ul{
+    margin-top: 15px;
+}
+/* слайдер */
+#slider2{margin: 50px auto 0 auto;}
+.none2{display:none}
+#slide01:checked ~ #slides2 .inner2{margin-left:0}
+#slide02:checked ~ #slides2 .inner2{margin-left:-100%}
+#slide03:checked ~ #slides2 .inner2{margin-left:-200%}
+#slide04:checked ~ #slides2 .inner2{margin-left:-300%}
+#slide05:checked ~ #slides2 .inner2{margin-left: -400%}
+#slide06:checked ~ #slides2 .inner2{margin-left: -500%}
+#slide07:checked ~ #slides2 .inner2{margin-left:-600%}
+
+#container2{width:100%;overflow:hidden;  border-radius: 15px;}
+.artmp2 img{width:100%}
+#slides2 .inner2{width:1000%;line-height:0; border-radius: 15px;}
+#slides2 .artmp2{width:10%;float:left; border-radius: 15px; }
+#commands2{margin:-25% 0 0 0;width:100%;height:50px}
+#commands2 .lb2{display:none;width:80px;height:80px;opacity:0.5;}
+#commands2 .lb2:hover{opacity:0.8}
+#active2{position:relative;z-index:9;margin:16% 0 0;text-align:center}
+#active2 .lb2{-webkit-border-radius:15px;-moz-border-radius:15px;border-radius:15px;display:inline-block;width:10px;height:10px;background:#bbb;}
+#active2 .lb2:hover{background:#333;border-color:#777!important;  border-radius: 15px;}
+#slide01:checked ~ #commands2 .lb2:nth-child(2),#slide02:checked ~ #commands2 .lb2:nth-child(3),#slide03:checked ~ #commands2 .lb2:nth-child(4),#slide04:checked ~ #commands2 .lb2:nth-child(5),#slide05:checked ~ #commands2 .lb2:nth-child(6), #slide06:checked ~ #commands2 .lb2:nth-child(7),#slide07:checked ~ #commands2 .lb2:nth-child(1){background:url('https://0.s3.envato.com/files/84450220/img/next.png') no-repeat;float:right;margin:auto 12px 0 0;display:block}
+#slide01:checked ~ #commands2 .lb2:nth-child(9),#slide02:checked ~ #commands2 .lb2:nth-child(1),#slide03:checked ~ #commands2 .lb2:nth-child(2),#slide04:checked ~ #commands2 .lb2:nth-child(3),#slide05:checked ~ #commands2 .lb2:nth-child(4), #slide06:checked ~ #commands2 .lb2:nth-child(5),#slide07:checked ~ #commands2 .lb2:nth-child(6){background:url('https://0.s3.envato.com/files/84450220/img/previous.png') no-repeat;float:left;margin:0 0 0 -6px;display:block}
+#slide01:checked ~ #active2 .lb2:nth-child(1),#slide02:checked ~ #active2 .lb2:nth-child(2),#slide03:checked ~ #active2 .lb2:nth-child(3),#slide04:checked ~ #active2 .lb2:nth-child(4),#slide05:checked ~ #active2 .lb2:nth-child(5), #slide06:checked ~ #active2 .lb2:nth-child(6),#slide07:checked ~ #active2 .lb1:nth-child(7){background:#000;opacity:0.6;border-color:#fff!important;border:2px solid #fff; border-radius: 15px;}
+#slides2{position:relative;padding:2px;border:1px solid #ddd;margin:45px 0 0;background:#FFF;  border-radius: 15px;background:-webkit-linear-gradient(#FFF,#FFF 20%,#EEE 80%,#DDD);background:-moz-linear-gradient(#FFF,#FFF 20%,#EEE 80%,#DDD);background:-ms-linear-gradient(#FFF,#FFF 20%,#EEE 80%,#DDD);background:-o-linear-gradient(#FFF,#FFF 20%,#EEE 80%,#DDD);background:linear-gradient(#FFF,#FFF 20%,#EEE 80%,#DDD);-webkit-border-radius: 15px;-moz-border-radius: 15px;border-radius: 15px;-webkit-box-shadow:0 0 3px rgba(0,0,0,0.2);-moz-box-shadow:0 0 3px rgba(0,0,0,0.2);box-shadow:0 0 3px rgba(0,0,0,0.2)}
+#slides2 .inner2{-webkit-transform:translateZ(0);-webkit-transition:all 800ms cubic-bezier(0.770,0.000,0.175,1.000);-moz-transition:all 800ms cubic-bezier(0.770,0.000,0.175,1.000);-ms-transition:all 800ms cubic-bezier(0.770,0.000,0.175,1.000);-o-transition:all 800ms cubic-bezier(0.770,0.000,0.175,1.000);transition:all 800ms cubic-bezier(0.770,0.000,0.175,1.000);-webkit-transition-timing-function:cubic-bezier(0.770,0.000,0.175,1.000);-moz-transition-timing-function:cubic-bezier(0.770,0.000,0.175,1.000);-ms-transition-timing-function:cubic-bezier(0.770,0.000,0.175,1.000);-o-transition-timing-function:cubic-bezier(0.770,0.000,0.175,1.000);transition-timing-function:cubic-bezier(0.770,0.000,0.175,1.000)}
+#slider2{-webkit-transform:translateZ(0);-webkit-transition:all 0.5s ease-out;-moz-transition:all 0.5s ease-out;-o-transition:all 0.5s ease-out;transition:all 0.5s ease-out}
+#commands2 .lb2{-webkit-transform:translateZ(0);-webkit-transition:opacity 0.2s ease-out;-moz-transition:opacity 0.2s ease-out;-o-transition:opacity 0.2s ease-out;transition:opacity 0.2s ease-out}
+#slide01:checked ~ #slides2 article:nth-child(1), #slide02:checked ~ #slides2 article:nth-child(2) .caption2,#slide03:checked ~ #slides2 article:nth-child(3) .caption2,#slide04:checked ~ #slides2 article:nth-child(4) .caption2,#slide05:checked ~ #slides2 article:nth-child(5) .caption2, #slide06:checked ~ #slides2 article:nth-child(6) .caption2,#slide07:checked ~ #slides2 article:nth-child(7) .caption2{opacity:1;-webkit-transition:all 1s ease-out 0.6s;-moz-transition:all 1s ease-out 0.6s;-o-transition:all 1s ease-out 0.6s;transition:all 1s ease-out 0.6s}
+#commands2,#commands2 .lb2,#slides2,#active2,#active2 .lb2{-webkit-transform:translateZ(0);-webkit-transition:all 0.5s ease-out;-moz-transition:all 0.5s ease-out;-o-transition:all 0.5s ease-out;transition:all 0.5s ease-out}
+#slider2{max-width:645px;}
+@media only screen and (max-width:850px) and (min-width:450px){
+  #slider2 #commands2{margin:-25% 0 0 5%;width:90%;height:50px}
+  #slider2 #commands2 .lb2{-moz-transform:scale(0.9);-webkit-transform:scale(0.9);-o-transform:scale(0.9);-ms-transform:scale(0.9);transform:scale(0.9)}
+  #slider2 #slides2 .caption2{padding:280px 12px}
+  #slider2 #slides2{padding:2px 0;-webkit-border-radius:0;-moz-border-radius:0;border-radius:0}
+  #slider2 #active2{margin:15% 0 0}
+}
+@media only screen and (max-width:450px){
+  #slider2 #commands2{margin:-28% 0 0 1%;width:100%;height:70px}
+  #slider2 #active2{margin:12% 0 0}
+  #slider2{max-width: 95%;}
+  #slider2 #slides2{padding:2px 0;-webkit-border-radius:15px;-moz-border-radius:15px;border-radius:15px}
+  #slider2 #slides2 .caption2{opacity:0!important}
+  #slider2 #commands2 .lb2{-moz-transform:scale(0.7);-webkit-transform:scale(0.7);-o-transform:scale(0.7);-ms-transform:scale(0.7);transform:scale(0.7)}
+}
+@media only screen and (max-width:970px) and (min-width:450px){
+  #slides2{max-width: 95%; margin: 0 auto;}
+  #slider2{
+    margin-top: 100px;
+  }
+  #slider2 #commands2 .lb2{-moz-transform:scale(0.6);-webkit-transform:scale(0.6);-o-transform:scale(0.6);-ms-transform:scale(0.6);transform:scale(0.6)}
+}
+/* Больница Вафандяль */ 
+.hospital{
+    margin-top: 100px;
+}
+.hospital_title{
+    font-weight: 700;
+    text-align: center;
+    color: black;
+    font-size: 36px;
+    margin-top: 30px;
+}
+.about_hospital{
+    text-align: center;
+    max-width: 1040px;
+    opacity: 60%;
+    font-weight: 700;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 30px auto 0 auto;
+    color: black;
+    font-size: 20px;
+}
+.hospital_img{
+    margin: 20px auto 0 auto;
+    display: block;
+}
+/* Специализированные отделы */
+.departments{
+    margin-top: 100px;
+}
+.departments_title{
+    font-weight: 700;
+    text-align: center;
+    color: black;
+    font-size: 36px;
+    margin-top: 30px;
+}
+.gray{
+    max-width: 1040px;
+    opacity: 60%;
+    font-weight: 700;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 30px auto 0 auto;
+    color: black;
+    font-size: 20px;
+}
+.treatment{
+    margin: 10px 0;
+    align-self: flex-start;
+}
+/* туры и стоимость */
+.tour_money{
+    margin-top: 100px;
+}
+.title_price{
+    color: #5A99BF;
+    font-weight: 700;
+    text-align: center;
+    font-size: 36px;
+    margin-top: 30px;
+}
+.gray2{
+    max-width: 1040px;
+    opacity: 60%;
+    font-weight: 700;
+    margin: 15px auto 0 auto;
+    color: black;
+    font-size: 20px;
+}
+/* стоимость */
+.div_price{
+    margin-top: 100px;
+}
+.p_price{
+    font-weight: 700;
+    text-align: center;
+    color: black;
+    font-size: 36px;
+    margin-top: 30px;
+}
+.div_price ul li:nth-child(6){
+    color: #1F2B72;
+}
+/* Оставление заявки */
+.record{
+  margin: 100px auto 0px auto;
+  border-radius: 15px;
+  max-width: 80%;
+  background-image: url("../images/record_bg.png");
+  height: 441px;
+  box-shadow: 40px 30px 0px 0px #608CA7;
+  background-size: cover;
+  display: flex;
+}
+.record_text{
+  padding-left: 70px;
+  max-width: 40%;
+  display: flex;
+  gap: 20px;
+  flex-direction: column;
+  justify-content: center;
+
+}
+#myForm{
+  margin: auto auto;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  max-width: 90%;
+}
+.free_consult{
+  text-shadow: 1px 3px 6px #000000;
+  font-weight: 700;
+  font-size: 36px;
+}
+.we_call{
+  font-weight: 100;
+  font-size: 20px;  
+}
+.record_forms{
+  margin: auto auto;
+  display: flex;
+  gap: 30px;
+  flex-direction: column;
+  color: white;
+}
+.name{
+  padding: 12px;
+  font-size: 26px;
+  font-weight: 400; 
+  color: white;
+  border: white 2px solid;
+  border-radius: 15px;
+  background: none;
+}
+.number{
+  padding: 12px;
+  font-size: 26px;
+  font-weight: 400; 
+  color: white;
+  border: white 2px solid;
+  border-radius: 15px;
+  background: none;
+}
+.send_record{
+  font-weight: 700;
+  font-size: 26px;
+  padding: 15px;
+  color: black;
+  background-color: #D9D9D9;
+  border-radius: 15px;
+
+}
+.personal_info{
+  font-weight: 100;
+  font-size: 11px;
+}
+.personal_info span{
+  color: #75C8FB;
+}
+::-webkit-input-placeholder { /* WebKit browsers */
+  color: white;
+}
+:-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+  color: white;
+}
+::-moz-placeholder { /* Mozilla Firefox 19+ */
+  color: white;
+}
+:-ms-input-placeholder { /* Internet Explorer 10+ */
+  color: white;
+}
+
+
+/* Подвал */
+.footer{
+  margin-top: 150px;  
+  padding: 30px;
+  font-family: "DM Sans", sans-serif;
+  color: black;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  background-color: #86C7EF;
+}
+.tvu_logo{
+  max-height: 100px;
+  width: 100px;
+}
+.footer_text{
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  font-size: 18px;
+  color: black;
+}
+.footer_number{
+  font-size: 15px;
+  font-weight: 600; 
+}
+.footer_2024{
+  font-size: 15px;
+}
+.footer_imgs{
+  gap: 30px;
+  display: flex;
+}
+a:active, /* активная/посещенная ссылка */
+a:hover,  /* при наведении */
+a{
+  text-decoration: none;
+  color: white;
+}
+.footer_a:active,
+.footer_a:hover,
+.footer_a{
+  text-decoration: none;
+  color: black;
+}
+@media only screen and (max-width: 850px){
+  .block1_text{
+    margin-top: 250px;
+  }
+  .logo_mobile{
+    display: block;
+    float: right;
+  }
+  .logo_pc{
+    display: none;
+  }
+  .hamburger-lines {
+    display: block;
+    height: 26px;
+    width: 32px;
+    position: absolute;
+    top: 17px;
+    left: 20px;
+    z-index: 2;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  
+  .hamburger-lines .line {
+    display: block;
+    height: 4px;
+    width: 100%;
+    border-radius: 10px;
+    background: #0e2431;
+  }
+  
+  .hamburger-lines .line1 {
+    transform-origin: 0% 0%;
+    transition: transform 0.4s ease-in-out;
+  }
+  
+  .hamburger-lines .line2 {
+    transition: transform 0.2s ease-in-out;
+  }
+  
+  .hamburger-lines .line3 {
+    transform-origin: 0% 100%;
+    transition: transform 0.4s ease-in-out;
+  }
+  
+  .menu-items {
+    position: absolute;
+    padding-top: 50px;
+    background-color: rgb(255, 255, 255);
+    height: 100vh;
+    width: 100%;
+    z-index: 1;
+    transform: translate(-150%);
+    display: flex;
+    flex-direction: column;
+    margin-left: -40px;
+    padding-left: 50px;
+    transition: transform 0.5s ease-in-out;
+    text-align: center;
+  }
+  
+  .menu-items li {
+    color: black;
+    margin-bottom: 1.2rem;
+    font-size: 1.5rem;
+    font-weight: 500;
+  }
+  .menu-items li a{
+    color: black;
+  }
+  
+  input[type="checkbox"]:checked ~ .menu-items {
+    transform: translateX(0);
+  }
+  
+  input[type="checkbox"]:checked ~ .hamburger-lines .line1 {
+    transform: rotate(45deg);
+  }
+  
+  input[type="checkbox"]:checked ~ .hamburger-lines .line2 {
+    transform: scaleY(0);
+  }
+  
+  input[type="checkbox"]:checked ~ .hamburger-lines .line3 {
+    transform: rotate(-45deg);
+  }
+  
+}
+/* 1 блок */
+@media only screen and (max-width: 600px){
+  .ll_tours{
+    margin-top: 100px;
+    font-size: 36px;
+  }
+  .about_us{
+    bottom: -10%;
+  }
+  .we_ll{
+    font-size: 24px;
+  }
+  .about_text{
+    font-size: 16px;
+  }
+}
+@media only screen and (max-width: 700px){
+  .ll_tours{
+    margin-top: 75px;
+  }
+}
+@media only screen and (max-width: 360px){
+  .ll_tours{
+    font-size: 32px;
+    margin-top: 0px;
+  }
+  .we_ll{
+    font-size: 20px;
+  }
+  .about_us{
+    bottom: -15%;
+  }
+}
+@media only screen and (max-width: 950px){
+  .first{
+      background-image: url("../images/health/adaptive_bg.png");
+  }
+}
+@media only screen and (max-width: 750px){
+  .first{
+      background-image: url("../images/health/adaptive2.png");
+  }
+}
+/* адаптив проживание */
+@media only screen and (max-width: 810px){
+    .about_hotel{
+        max-width: 90%;
+    }
+}
+@media only screen and (max-width: 420px){
+    .about_hotel{
+        font-size: 16px;
+    }
+}
+/* больница */
+@media only screen and (max-width: 1015px){
+    .hospital{
+        max-width: 90%;
+        margin: 100px auto 0 auto;
+    }
+}
+@media only screen and (max-width: 750px){
+    .hospital_img{
+        max-width: 90%;
+        margin: 15px auto 0 auto;
+    }
+}
+@media only screen and (max-width: 550px){
+    .hospital_title{
+        font-size: 32px;
+    }
+    .about_hospital{
+        font-size: 18px;
+    }
+}
+@media only screen and (max-width: 380px){
+    .hospital_title{
+        font-size: 28px;
+    }
+    .about_hospital{
+        font-size: 15px;
+    }
+}
+/* отделы */
+@media only screen and (max-width: 1070px){
+    .departments{
+        max-width: 90%;
+        margin: 100px auto 0 auto;
+    }
+}
+@media only screen and (max-width: 750px){
+    .departments_title{
+        font-size: 32px;
+    }
+    .gray2{
+        font-size: 18px;
+    }
+}
+@media only screen and (max-width: 500px){
+    .departments_title{
+        font-size: 28px;
+    }
+    .gray2{
+        font-size: 16px;
+    }
+}
+@media only screen and (max-width: 420px){
+    .departments_title{
+        font-size: 24px;
+    }
+    .gray2{
+        font-size: 16px;
+    }
+}
+@media only screen and (max-width: 320px){
+    .departments_title{
+        font-size: 20px;
+    }
+    .gray2{
+        font-size: 16px;
+    }
+}
+/* туры и цены */
+@media only screen and (max-width: 1070px){
+    .tour_money{
+        max-width: 90%;
+        margin: 100px auto 0 auto;
+    }
+}
+@media only screen and (max-width: 520px){
+    .title_price{
+        font-size: 32px;
+    }
+}
+/* стоимость */ 
+.div_price{
+    margin-top: 100px;
+}
+.p_price{
+    font-weight: 700;
+    text-align: center;
+    color: black;
+    font-size: 36px;
+    margin-top: 30px;
+}
+.div_price ul li:nth-child(6){
+    color: #1F2B72;
+}
+@media only screen and (max-width: 1150px){
+    .div_price{
+        max-width: 90%;
+        margin: 100px auto 0 auto;
+    }
+}
+@media only screen and (max-width: 500px){
+    .p_price{
+        font-size: 32px;
+    }
+}
+/* 4 блок */ 
+@media only screen and (max-width: 945px){
+  .record{
+    align-items: center;
+    flex-direction: column;
+  }
+  .record_text{
+    margin-top: 15px;
+    padding: 0;
+    text-align: center;
+  }
+  .free_consult{
+    font-size: 20px;
+  }
+  .we_call{
+    font-size: 16px;
+  }
+}
+@media only screen and (max-width: 500px){
+  .record{
+    box-shadow: 10px 15px 0px 0px #608CA7;
+  }
+  .record_forms{
+    max-width: 90%;
+  }
+  .free_consult{
+    font-size: 18px;
+  }
+  .we_call{
+    font-size: 14px;
+  }
+  .name, .number{
+    font-size: 16px;
+  }
+  .personal_info{
+    text-align: center;
+  }
+  .send_record{
+    font-size: 16px;
+  }
+}
+/* Мессенджеры */
+.messengers{
+list-style-type: none;
+  position: fixed;
+  right: 19px;
+  bottom: 100px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.messengers li{
+  list-style-type: none;
+}
+@media only screen and (max-width: 450px){
+  .whatsapp2, .telegram{
+    max-width: 42px;
+  }
+}

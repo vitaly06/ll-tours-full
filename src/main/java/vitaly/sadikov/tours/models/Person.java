@@ -7,6 +7,8 @@ public class Person {
     private String name;
     @NotEmpty
     private String number;
+    @NotEmpty
+    private String tour;
     public Person(){
 
     }
@@ -29,5 +31,13 @@ public class Person {
 
     public void setNumber(String number) {
         this.number = number;
+    }
+
+    public String getTour() {
+        return tour;
+    }
+
+    public void setTour(String tour) {
+        this.tour = tour;
     }
 }

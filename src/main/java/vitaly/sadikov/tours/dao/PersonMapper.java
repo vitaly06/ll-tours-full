@@ -12,6 +12,7 @@ public class PersonMapper implements RowMapper<Person> {
         Person person = new Person();
         person.setName(resultSet.getString("name"));
         person.setNumber(resultSet.getString("number"));
+        person.setTour(resultSet.getString("tour"));
         return person;
     }
 }

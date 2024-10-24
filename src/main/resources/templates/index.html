@@ -3,8 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
-    <title>ll tours</title>
+    <title>ll tours | Туроператор</title>
     <link rel="stylesheet" href="css/style.css">
+    <link rel="icon" href="images/ll_logo.svg">
+    <script src="//code.jivo.ru/widget/E6GgqhC1II" async></script>
 </head>
 <body>
     <div class="first">
@@ -23,11 +25,14 @@
                     </div>
                     <div class="menu-items">
                         <li><a href="#main">Главная</a></li>
-                        <li><a href="#about">О нас</a></li>
-                        <li class="logo_pc"><img src="images/ll_logo.svg" alt=""></li>
+                        <li><a th:href="@{/contacts}" target="_blank">Контакты</a></li>
+                        <li><a th:href="@{/feedback}" target="_blank">Отзывы</a></li>
                         <li><a href="#tours">Туры</a></li>
+                        <li class="logo_pc"><img src="images/ll_logo.svg" alt=""></li>
                         <li><a href="#partners">Партнёры</a></li>
                         <li><a href="tel:+79878500070">+7(987)-850-00-70</a></li>
+                        <li><a  href="https://wa.me/79878954849?text=%D0%97%D0%B4%D1%80%D0%B0%D0%B2%D1%81%D1%82%D0%B2%D1%83%D0%B9%D1%82%D0%B5!%20%F0%9F%91%8B%20%D0%9C%D0%BD%D0%B5%20%D0%BD%D0%B5%D0%BE%D0%B1%D1%85%D0%BE%D0%B4%D0%B8%D0%BC%D0%B0%20%D0%BA%D0%BE%D0%BD%D1%81%D1%83%D0%BB%D1%8C%D1%82%D0%B0%D1%86%D0%B8%D1%8F" target="_blank"><img src="images/whatsapp.png" alt="" class="whatsapp" style="max-width: 32px; height: auto;"></a></li>
+                        <li><a href="https://t.me/+79878954849" target="_blank"><img src="images/telegram.png" alt="" class="telegram" style="max-width: 32px; height: auto;"></a></li>
                     </div>
                     </div>
                 </div>
@@ -35,14 +40,14 @@
             <div class="block1_text" id="main">
                 <p class="tour_operator">Туроператор</p>
                 <p class="ll_tours">LL Tours - Твои Впечатления Уникальны! Учись и путешествуй с нами!</p>
-                <p class="specials">специализируемся на организации увлекательных и незабываемых путешествий для наших клиентов!</p>
+                <p class="specials">специализируемся на организации образовательных групповых туров для школьнгиков и студентов!</p>
             </div>
         </div>
         <div class="about_us" id="about">
             <p class="p_about">О нас</p>
             <hr class="about_hr">
             <p class="we_ll">Мы - туроператор LL Tours</p>
-            <p class="about_text">специализирующийся на организации увлекательных и незабываемых путешествий для наших клиентов. Мы стремимся предоставить высококачественный сервис, индивидуальный подход к каждому клиенту и непревзойденные впечатления от путешествий.</p>
+            <p class="about_text">специализирующийся на организации образовательных групповых туров для школьнгиков и студентов. Мы стремимся предоставить высококачественный сервис, индивидуальный подход к каждому клиенту и непревзойденные впечатления от путешествий.</p>
         </div>
     </div>
     <div class="second" id="tours">
@@ -50,33 +55,61 @@
         <div class="second_text">
             <p class="all_tours">Посмотрите все направления туров</p>
             <p class="uniqe_chance">Уникальная возможность путешествовать и открывать новые места, культуры и людей! Наши клиент смогут испытать незабываемые приключения, отдохнуть от повседневной рутины, познакомиться с разными культурами, насладиться красотой природы и историческими достопримечательностями</p>
-            <button class="second_button">Смотреть все</button>
         </div>
     </div>
-    <div class="third">
+    <div class="third" id="all">
         <div class="academ">
             <p class="academ_programm">Академическая программа</p>
             <p class="for_russian">для Российских врачей в области Китайской медицины</p>
             <button class="academ_button"><a class="academ_href" th:href="@{/academy}" target="_blank">Узнать подробнее</a></button>
         </div>
         <div class="study">
-            <p class="study_programm">Образовательная программа</p>
+            <p class="study_programm">Летний лагерь</p>
             <p class="china">в город Далянь, Китай</p>
             <button class="study_button"><a class="academ_href" th:href="@{/dalayn}" target="_blank">Узнать подробнее</a></button></button>
         </div>
+        <div class="dammam">
+            <p class="dammam_programm">Культура Арабского мира</p>
+            <p class="city_dammam">город Даммам</p>
+            <button class="dammam_button"><a class="dammam_href" th:href="@{/dammam}" target="_blank">Узнать подробнее</a></button>
+        </div>
+        <div class="beijing">
+            <p class="beijing_programm">Поездка в Китай</p>
+            <p class="city_beijing">город Пекин</p>
+            <button class="beijing_button"><a class="dammam_href" th:href="@{/beijing}" target="_blank">Узнать подробнее</a></button>
+        </div>
+        <div class="health">
+            <p class="health_programm">Лечебные туры в Китай</p>
+            <p class="city_health">Оздоровительная поездка</p>
+            <button class="health_button"><a class="health_href" th:href="@{/health}" target="_blank">Узнать подробнее</a></button>
+        </div>
+        <div class="dubai">
+            <p class="dubai_programm">Поездка в Дубай</p>
+            <p class="city_dubai">Незабываемое путешествие</p>
+            <button class="dubai_button"><a class="dubai_href" th:href="@{/dubai}" target="_blank">Узнать подробнее</a></button>
+        </div>
     </div>
+    
     <div class="record">
         <div class="record_text">
             <p class="free_consult">Оставьте заявку на бесплатную консультацию!</p>
             <p class="we_call">Мы перезвоним Вам в ближайшее время</p>
         </div>
         <div class="record_forms">
-            <form th:method="POST" th:action="@{/}" th:object="${person}" class="record_forms">
-            <input type="text" class="name" placeholder="ФИО" name="name">
-            <input type="tel" class="number" placeholder="Номер телефона" name="number">
+            <form th:method="POST" th:action="@{/}" th:object="${person}" id="myForm">
+            <input type="text" class="name" placeholder="ФИО" name="name" required>
+            <input type="tel" class="number" placeholder="Номер телефона" name="number" required>
+                <input type="hidden" class="tour" value="none" name="tour">
             <button class="send_record">Отправить заявку</button>
             </form>
             <p class="personal_info">Нажимая кнопку, Вы даете согласие на <span>обработку персональных данных</span></p>
+        </div>
+    </div>
+    <div id="myModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <p>Форма успешно отправлена!</p>
+            <p>Свяжемся с вами в ближайшее время</p>
         </div>
     </div>
     <div class="partners" id="partners">
@@ -88,12 +121,42 @@
             <img src="images/big_logo.png" alt="" class="big_logo">
             <button class="partners_button"><a class="ll_href" href="https://languagelink-orenburg.ru/" target="_blank">подробнее</a></button>
         </div>
+        <div class="partners_third">
+            <img src="images/logo.jpg" alt="" class="china_logo">
+            <p>Liaoning Haohan Xingtu International Travel Agency Co., Ltd.</p>
+        </div>
     </div>
     <div class="footer">
-        <img src="images/tvu_logo.png" alt="" class="tvu_logo">
+        <div class="footer_imgs">
+            <img src="images/tvu_logo.png" alt="" class="tvu_logo">
+            <img src="images/ll_logo.svg" alt="" class="ll_logo_footer">
+        </div>
         <p class="footer_text"><span>Ответственный подход </span><span>к работе людей и компаний</span></p>
         <p class="footer_number"><a href="tel:+79878500070" class="footer_a">+7(987)-850-00-70</a></p>
-        <p class="footer_2024">©2024 ТВУ</p>
+        <div class="footer_contacts">
+            <a href="https://wa.me/79878954849?text=%D0%97%D0%B4%D1%80%D0%B0%D0%B2%D1%81%D1%82%D0%B2%D1%83%D0%B9%D1%82%D0%B5!%20%F0%9F%91%8B%20%D0%9C%D0%BD%D0%B5%20%D0%BD%D0%B5%D0%BE%D0%B1%D1%85%D0%BE%D0%B4%D0%B8%D0%BC%D0%B0%20%D0%BA%D0%BE%D0%BD%D1%81%D1%83%D0%BB%D1%8C%D1%82%D0%B0%D1%86%D0%B8%D1%8F" target="_blank"><img src="images/whatsapp.png" alt="" class="whatsapp" style="max-width: 32px; height: auto;"></a>
+            <a href="https://t.me/+79878954849" target="_blank"><img src="images/telegram.png" alt="" class="telegram" style="max-width: 32px; height: auto;"></a>
+        </div>
+        <p class="footer_2024">©2024 ТВУ | Language Link</p>
+    </div>
+    <script>
+        const form = document.getElementById('myForm');
+        const modal = document.getElementById('myModal');
+        const closeBtn = document.getElementsByClassName('close')[0];
+
+        form.addEventListener('submit', function(event) {
+        modal.style.display = 'block';
+         setTimeout("alert('3-секундная задержка прошла');", 3000);
+        });
+
+        closeBtn.addEventListener('click', function() {
+        modal.style.display = 'none';
+        });
+    </script>
+    <div class="messengers">
+        <li><a href="tel:+79878500070"><img src="images/phone.png" alt="" class="telegram telegram2" style="height: auto;"></a></li>
+        <li><a  href="https://wa.me/79878954849?text=%D0%97%D0%B4%D1%80%D0%B0%D0%B2%D1%81%D1%82%D0%B2%D1%83%D0%B9%D1%82%D0%B5!%20%F0%9F%91%8B%20%D0%9C%D0%BD%D0%B5%20%D0%BD%D0%B5%D0%BE%D0%B1%D1%85%D0%BE%D0%B4%D0%B8%D0%BC%D0%B0%20%D0%BA%D0%BE%D0%BD%D1%81%D1%83%D0%BB%D1%8C%D1%82%D0%B0%D1%86%D0%B8%D1%8F" target="_blank"><img src="images/whatsapp.png" alt="" class="whatsapp whatsapp2" style="height: auto;"></a></li>
+        <li><a href="https://t.me/+79878954849" target="_blank"><img src="images/telegram.png" alt="" class="telegram telegram2" style="height: auto;"></a></li>
     </div>
 </body>
 </html>

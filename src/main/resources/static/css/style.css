@@ -75,6 +75,52 @@
     font-weight: 400;
   }
   /*__________________________*/
+  .modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+  }
+  
+  .modal-content {
+    border-radius: 15px;
+    background-color: #fefefe;
+    margin: 15% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    max-width: 500px;
+  }
+
+
+  .modal-content p{
+    color: black;
+    font-size: 24px;
+  }
+  .close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+  }
+  
+  .close:hover,
+  .close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+  }
+  @media only screen and (max-width: 510px){
+    .modal-content {
+      max-width: 90%;
+    }
+    .modal-content p{
+      font-size: 20px;
+    }
+  }
   body{
     color: white;
     font-family: "Ubuntu", sans-serif;
@@ -220,7 +266,6 @@
   gap: 100px;
 }
 .academ{
-  text-align: center;
   box-shadow: 12px 10px 25px 0px rgba(0,0,0,0.75);
   -webkit-box-shadow: 12px 10px 25px 0px rgba(0,0,0,0.75);
   -moz-box-shadow: 12px 10px 25px 0px rgba(0,0,0,0.75);
@@ -268,6 +313,7 @@
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
+  width: 598px;
   height: 559px;
   background-image: url("../images/study.png");
   background-size: cover;
@@ -301,6 +347,178 @@
 .academ_href, .academ_href:hover, .academ_href:active{
   color: rgba(17, 34, 17, 1);
 }
+.dammam{
+  box-shadow: 12px 10px 25px 0px rgba(0,0,0,0.75);
+  -webkit-box-shadow: 12px 10px 25px 0px rgba(0,0,0,0.75);
+  -moz-box-shadow: 12px 10px 25px 0px rgba(0,0,0,0.75);
+  border-radius: 15px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  width: 598px;
+  height: 559px;
+  background-image: url("../images/dammam.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.dammam_programm{
+  margin: 0 auto 20px auto;
+  text-align: center;
+  max-width: 80%;
+  font-weight: 700;
+  font-size: 40px;
+}
+.city_dammam{
+  margin: 0px auto 20px auto;
+  text-align: center;
+  max-width: 80%;
+  font-weight: 100;
+  font-size: 16px;
+}
+.dammam_button{
+  padding: 15px;
+  margin: 0 auto 70px auto;
+  text-align: center;
+  max-width: 30%;
+  border-radius: 10px;
+  color: rgba(17, 34, 17, 1);
+  background-color: rgba(134, 199, 239, 1);
+  font-weight: 700;
+  font-size: 14px;
+}
+.dammam_href, .dammam_href:hover, .dammam_href:active{
+  color: rgba(17, 34, 17, 1);
+}
+.beijing{
+  box-shadow: 12px 10px 25px 0px rgba(0,0,0,0.75);
+  -webkit-box-shadow: 12px 10px 25px 0px rgba(0,0,0,0.75);
+  -moz-box-shadow: 12px 10px 25px 0px rgba(0,0,0,0.75);
+  border-radius: 15px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  width: 598px;
+  height: 559px;
+  background-image: url("../images/beijing.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.beijing_programm{
+  margin: 0 auto 20px auto;
+  text-align: center;
+  max-width: 80%;
+  font-weight: 700;
+  font-size: 40px;
+}
+.city_beijing{
+  margin: 0px auto 20px auto;
+  text-align: center;
+  max-width: 80%;
+  font-weight: 100;
+  font-size: 16px;
+}
+.beijing_button{
+  padding: 15px;
+  margin: 0 auto 70px auto;
+  text-align: center;
+  max-width: 30%;
+  border-radius: 10px;
+  color: rgba(17, 34, 17, 1);
+  background-color: rgba(134, 199, 239, 1);
+  font-weight: 700;
+  font-size: 14px;
+}
+.beijing_href, .beijing_href:hover, .beijing_href:active{
+  color: rgba(17, 34, 17, 1);
+}
+.health{
+  box-shadow: 12px 10px 25px 0px rgba(0,0,0,0.75);
+  -webkit-box-shadow: 12px 10px 25px 0px rgba(0,0,0,0.75);
+  -moz-box-shadow: 12px 10px 25px 0px rgba(0,0,0,0.75);
+  border-radius: 15px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  width: 598px;
+  height: 559px;
+  background-image: url("../images/health.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.health_programm{
+  margin: 0 auto 20px auto;
+  text-align: center;
+  max-width: 80%;
+  font-weight: 700;
+  font-size: 40px;
+}
+.city_health{
+  margin: 0px auto 20px auto;
+  text-align: center;
+  max-width: 80%;
+  font-weight: 100;
+  font-size: 16px;
+}
+.health_button{
+  padding: 15px;
+  margin: 0 auto 70px auto;
+  text-align: center;
+  max-width: 30%;
+  border-radius: 10px;
+  color: rgba(17, 34, 17, 1);
+  background-color: rgba(134, 199, 239, 1);
+  font-weight: 700;
+  font-size: 14px;
+}
+.health_href, .health_href:hover, .health_href:active{
+  color: rgba(17, 34, 17, 1);
+}
+.dubai{
+  box-shadow: 12px 10px 25px 0px rgba(0,0,0,0.75);
+  -webkit-box-shadow: 12px 10px 25px 0px rgba(0,0,0,0.75);
+  -moz-box-shadow: 12px 10px 25px 0px rgba(0,0,0,0.75);
+  border-radius: 15px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  width: 598px;
+  height: 559px;
+  background-image: url("../images/dubai.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.dubai_programm{
+  margin: 0 auto 20px auto;
+  text-align: center;
+  max-width: 80%;
+  font-weight: 700;
+  font-size: 40px;
+}
+.city_dubai{
+  margin: 0px auto 20px auto;
+  text-align: center;
+  max-width: 80%;
+  font-weight: 100;
+  font-size: 16px;
+}
+.dubai_button{
+  padding: 15px;
+  margin: 0 auto 70px auto;
+  text-align: center;
+  max-width: 30%;
+  border-radius: 10px;
+  color: rgba(17, 34, 17, 1);
+  background-color: rgba(134, 199, 239, 1);
+  font-weight: 700;
+  font-size: 14px;
+}
+.dubai_href, .dubai_href:hover, .dubai_href:active{
+  color: rgba(17, 34, 17, 1);
+}
 /* Оставление заявки */
 .record{
   margin: 100px auto 0px auto;
@@ -320,6 +538,13 @@
   flex-direction: column;
   justify-content: center;
 
+}
+#myForm{
+  margin: auto auto;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  max-width: 90%;
 }
 .free_consult{
   text-shadow: 1px 3px 6px #000000;
@@ -415,8 +640,28 @@
   align-items: center;
   gap: 150px;
 }
+.partners_third{
+  margin-top: 50px;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 50px;
+}
+
+.partners_third p{
+  color: black;
+  font-size: 26px;
+}
 .big_logo{
   max-width: 90%;
+}
+.china_logo{
+    max-width: 90%;
+}
+@media only screen and (max-width: 900px){
+    .china_logo{
+        max-width: 90%;
+    }
 }
 .partners_button{
   font-weight: 500;
@@ -460,6 +705,10 @@
 .footer_2024{
   font-size: 15px;
 }
+.footer_imgs{
+  gap: 30px;
+  display: flex;
+}
 a:active, /* активная/посещенная ссылка */
 a:hover,  /* при наведении */
 a{
@@ -488,7 +737,7 @@ a{
     font-size: 28px;
   }
 }
-@media only screen and (max-width: 700px){
+@media only screen and (max-width: 850px){
   .block1_text{
     margin-top: 150px;
   }
@@ -663,10 +912,10 @@ a{
 }
 /* 3 блок */ 
 @media only screen and (max-width: 530px){
-  .academ_programm, .study_programm{
+  .academ_programm, .study_programm, .dammam_programm{
     font-size: 24px;
   }
-  .study_button, .academ_button{
+  .study_button, .academ_button, .dammam_button{
     max-width: 50%;
   }
 }
@@ -718,5 +967,20 @@ a{
   }
   .partners_button{
     font-size: 16px;
+  }
+}
+/* Мессенджеры */
+.messengers{
+  list-style-type: none;
+  position: fixed;
+  right: 19px;
+  bottom: 100px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+@media only screen and (max-width: 450px){
+  .whatsapp2, .telegram{
+    max-width: 42px;
   }
 }

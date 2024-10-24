@@ -20,6 +20,6 @@ public class PersonDAO {
 
     // Добавление заявки
     public void save(Person person) {
-        jdbcTemplate.update("INSERT INTO requests VALUES(?, ?)", person.getName(), person.getNumber());
+        jdbcTemplate.update("INSERT INTO requests VALUES(?, ?, ?)", person.getName(), person.getNumber(), person.getTour());
     }
 }

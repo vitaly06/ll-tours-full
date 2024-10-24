@@ -81,6 +81,52 @@
     font-weight: 400;
   }
   /*__________________________*/
+  .modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+  }
+  
+  .modal-content {
+    border-radius: 15px;
+    background-color: #fefefe;
+    margin: 15% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    max-width: 500px;
+  }
+
+
+  .modal-content p{
+    color: black;
+    font-size: 24px;
+  }
+  .close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+  }
+  
+  .close:hover,
+  .close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+  }
+  @media only screen and (max-width: 510px){
+    .modal-content {
+      max-width: 90%;
+    }
+    .modal-content p{
+      font-size: 20px;
+    }
+  }
   body{
     color: white;
     font-family: "Ubuntu", sans-serif;
@@ -316,6 +362,13 @@ article img{width:100%}
   flex-direction: column;
   color: white;
 }
+#myForm{
+  margin: auto auto;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  max-width: 90%;
+}
 .name{
   padding: 12px;
   font-size: 26px;
@@ -393,6 +446,10 @@ article img{width:100%}
 .footer_2024{
   font-size: 15px;
 }
+.footer_imgs{
+  gap: 30px;
+  display: flex;
+}
 a:active, /* активная/посещенная ссылка */
 a:hover,  /* при наведении */
 a{
@@ -421,7 +478,7 @@ a{
     font-size: 28px;
   }
 }
-@media only screen and (max-width: 700px){
+@media only screen and (max-width: 850px){
   .block1_text{
     margin-top: 150px;
   }
@@ -633,5 +690,20 @@ a{
   .price_number{
     font-size: 28px;
     max-width: 80%;
+  }
+}
+/* Мессенджеры */
+.messengers{
+list-style-type: none;
+  position: fixed;
+  right: 19px;
+  bottom: 100px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+@media only screen and (max-width: 450px){
+  .whatsapp2, .telegram{
+    max-width: 42px;
   }
 }
